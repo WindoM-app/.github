@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 20" width="1200" height="20" role="presentation" aria-hidden="true">
+  <defs><linearGradient id="d" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8" stop-opacity="0"/><stop offset=".5" stop-color="#7b9ef5"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></linearGradient>
+  <filter id="g"><feGaussianBlur stdDeviation="2.5"/></filter></defs>
+  <style>.s{animation:s 6s ease-in-out infinite}@keyframes s{0%,100%{transform:translateX(-380px)}50%{transform:translateX(380px)}}@media (prefers-reduced-motion:reduce){.s{animation:none}}</style>
+  <rect x="60" y="9" width="1080" height="2" rx="1" fill="url(#d)" opacity=".55"/>
+  <g class="s"><ellipse cx="600" cy="10" rx="60" ry="5" fill="#7dd3fc" filter="url(#g)" opacity=".9"/><rect x="540" y="9" width="120" height="2" rx="1" fill="#e0f2fe"/></g>
+</svg>

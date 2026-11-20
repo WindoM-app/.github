@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="t d">
+  <title id="t">WindoM</title>
+  <desc id="d">An animated header: glowing waves over a deep blue sky, the WindoM wordmark, and a greeting that follows the hour.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1236"/><stop offset=".55" stop-color="#17237a"/><stop offset="1" stop-color="#0a1a52"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f8ff"/><stop offset="1" stop-color="#a8c8ff"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".25" stop-color="#38bdf8"/>
+      <stop offset=".75" stop-color="#7b9ef5"/><stop offset="1" stop-color="#7b9ef5" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="orb" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity=".55"/><stop offset="1" stop-color="#7dd3fc" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="clipall"><rect width="1200" height="380" rx="20"/></clipPath>
+  </defs>
+  <style>
+    .sans{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+    .mark{font-weight:800;font-size:132px;letter-spacing:-4px;fill:url(#ink)}
+    .tag{font-size:26px;fill:#b9cdfd;letter-spacing:.5px}
+    .hello{font-size:22px;fill:#7dd3fc;font-weight:600}
+    .orb{animation:float 9s ease-in-out infinite}
+    .o2{animation-duration:12s;animation-delay:-3s}
+    .o3{animation-duration:15s;animation-delay:-7s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-26px)}}
+    .rise{opacity:0;animation:rise 1.2s .2s cubic-bezier(.2,.7,.2,1) forwards}
+    .rise2{animation-delay:.7s}
+    @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+    .pulse{animation:pulse 4s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}
+    .g{opacity:0;animation:cycle 12s infinite}
+    .g1{animation-delay:0s}.g2{animation-delay:4s}.g3{animation-delay:8s}
+    @keyframes cycle{0%{opacity:0;transform:translateY(8px)}6%,30%{opacity:1;transform:none}36%,100%{opacity:0;transform:translateY(-8px)}}
+    .star{animation:tw 3s ease-in-out infinite}
+    @keyframes tw{0%,100%{opacity:.15}50%{opacity:.9}}
+    @media (prefers-reduced-motion:reduce){.orb,.pulse,.star,.g{animation:none}.g1{opacity:1}.rise{animation:none;opacity:1}}
+  </style>
+  <g clip-path="url(#clipall)">
+    <rect width="1200" height="380" fill="url(#sky)"/>
+    <!-- stars -->
+    <g fill="#cfe3ff">
+      <circle class="star" cx="90" cy="58" r="1.6"/><circle class="star" style="animation-delay:-1s" cx="240" cy="120" r="1.2"/>
+      <circle class="star" style="animation-delay:-2s" cx="430" cy="44" r="1.4"/><circle class="star" style="animation-delay:-.5s" cx="690" cy="78" r="1.2"/>
+      <circle class="star" style="animation-delay:-1.5s" cx="905" cy="40" r="1.6"/><circle class="star" style="animation-delay:-2.5s" cx="1090" cy="104" r="1.3"/>
+      <circle class="star" style="animation-delay:-.8s" cx="1150" cy="248" r="1.2"/><circle class="star" style="animation-delay:-1.8s" cx="60" cy="300" r="1.4"/>
+    </g>
+    <!-- glow orbs -->
+    <circle class="orb" cx="170" cy="250" r="120" fill="url(#orb)"/>
+    <circle class="orb o2" cx="1010" cy="120" r="150" fill="url(#orb)"/>
+    <circle class="orb o3" cx="620" cy="330" r="110" fill="url(#orb)"/>
+    <!-- waves (SMIL path morph; the same family of lines as the icon) -->
+    <g fill="none" stroke="url(#wave)" stroke-linecap="round" filter="url(#glow)" transform="translate(0,26)">
+      <path stroke-width="3" d="M-20 262 Q 150 214 300 252 T 600 246 T 900 258 T 1220 240">
+        <animate attributeName="d" dur="9s" repeatCount="indefinite"
+          values="M-20 262 Q 150 214 300 252 T 600 246 T 900 258 T 1220 240;M-20 250 Q 150 270 300 240 T 600 262 T 900 240 T 1220 256;M-20 262 Q 150 214 300 252 T 600 246 T 900 258 T 1220 240"/>
+      </path>
+      <path stroke-width="2.2" opacity=".7" d="M-20 300 Q 180 262 360 294 T 700 288 T 1000 300 T 1220 282">
+        <animate attributeName="d" dur="12s" repeatCount="indefinite"
+          values="M-20 300 Q 180 262 360 294 T 700 288 T 1000 300 T 1220 282;M-20 288 Q 180 312 360 282 T 700 304 T 1000 286 T 1220 302;M-20 300 Q 180 262 360 294 T 700 288 T 1000 300 T 1220 282"/>
+      </path>
+      <path stroke-width="1.6" opacity=".45" d="M-20 336 Q 220 306 420 330 T 800 326 T 1220 334">
+        <animate attributeName="d" dur="15s" repeatCount="indefinite"
+          values="M-20 336 Q 220 306 420 330 T 800 326 T 1220 334;M-20 326 Q 220 350 420 322 T 800 344 T 1220 322;M-20 336 Q 220 306 420 330 T 800 326 T 1220 334"/>
+      </path>
+    </g>
+    <!-- wordmark -->
+    <g class="sans" text-anchor="middle">
+      <g class="rise"><text class="mark" x="600" y="178" filter="url(#glow)">WindoM</text></g>
+      <g class="rise rise2">
+        <text class="tag" x="600" y="224">A Chrome new tab that is actually worth opening.</text>
+      </g>
+      <!-- greeting follows the hour, as the product does -->
+      <g class="hello">
+        <text class="g g1" x="600" y="58">Good morning</text>
+        <text class="g g2" x="600" y="58">Good afternoon</text>
+        <text class="g g3" x="600" y="58">Good evening</text>
+      </g>
+    </g>
+  </g>
+  <rect x=".75" y=".75" width="1198.5" height="378.5" rx="19.5" fill="none" stroke="#7b9ef5" stroke-opacity=".35" class="pulse"/>
+</svg>
